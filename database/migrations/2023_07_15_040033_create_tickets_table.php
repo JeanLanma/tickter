@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('status')->default('open');
             $table->foreignId('applicant_id')->constrained('applicants')->nullable();
             $table->timestamps();

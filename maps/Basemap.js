@@ -20,7 +20,7 @@ const Applicant = {
 const Ticket = {
     "id": "int(11) not null auto_increment primary key",
     "title": "varchar(255) not null",
-    "description": "text not null",
+    "description": "text null",
     "status": "varchar(255) not null",
     "applicant": "int(11) null",
     "created_at": "timestamp null default current_timestamp",
