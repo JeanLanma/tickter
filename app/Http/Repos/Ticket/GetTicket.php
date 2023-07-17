@@ -12,6 +12,11 @@ class GetTicket
         return Ticket::all();
     }
 
+    public function GetTicket($id)
+    {
+        return Ticket::with('user')->find($id);
+    }
+
     /**
      * Get all tickets for a user
      * @param int $id

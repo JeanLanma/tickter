@@ -3,6 +3,7 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
+import MainButton from '@/Shared/MainButton.vue';
 import { Link, useForm, usePage } from '@inertiajs/vue3';
 
 const props = defineProps({
@@ -21,11 +22,16 @@ const form = useForm({
 <template>
 
     <header>
-        <h2 class="text-lg font-medium text-gray-900">Mis ultimos tickets</h2>
+        <h1 class="text-xl font-bold text-gray-800">Mis ultimos tickets</h1>
 
-        <p class="mt-1 text-sm text-gray-600">
-            
-        </p>
+        <div class="my-8">
+            <Link :href="route('ticket.create')">
+                <MainButton>
+                    Crear ticket
+                </MainButton>
+            </Link>
+        </div>
+
     </header>
 
     <div class="p-3">

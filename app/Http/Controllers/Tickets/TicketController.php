@@ -23,6 +23,13 @@ class TicketController extends Controller
         return inertia('Tickets/Create');
     }
 
+    public function show(GetTicket $getTicket, $ticket)
+    {
+        return inertia('Tickets/Show', [
+            'ticket' => $getTicket->GetTicket($ticket)
+        ]);
+    }
+
     public function store(PostTicketRequest $request, PostTicket $postTicket)
     {
         $ticket = $postTicket->StoreTicket($request);

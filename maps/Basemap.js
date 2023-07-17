@@ -22,7 +22,8 @@ const Ticket = {
     "title": "varchar(255) not null",
     "description": "text null",
     "status": "varchar(255) not null",
-    "applicant": "int(11) null",
+    "applicant_id": "int(11) null",
+    "created_by": "int(11) null fk:User.id on delete cascade on update cascade",
     "created_at": "timestamp null default current_timestamp",
     "updated_at": "timestamp null default current_timestamp",
 }

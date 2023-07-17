@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('status')->default('open');
             $table->foreignId('applicant_id')->constrained('applicants')->nullable();
+            $table->foreignId('user_id')->constrained('users')->nullable();
             $table->timestamps();
         });
     }
